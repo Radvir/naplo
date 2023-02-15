@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 17, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.értékelés {
+    border-right: 2px solid #d9faff;
+    flex: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.jegyek {
+    border-right: 2px solid #d9faff;
+    flex: 1.3;
+    width: 100%;
+    height: 100%;
+}
+
+.adatok {
+    flex: 4;
+    width: 100%;
+    height: 100%;
+}
