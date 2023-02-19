@@ -33,6 +33,30 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.prec_to_jegy {
+    position: relative;
+    flex: 1;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.separator {
+    width: 80%;
+    height: 2px;
+    background-color: #d9faff;
+    position: absolute;
+    bottom: 0px;
+}
+
+.canvas2_div {
+    flex: 1;
+    height: 50%;
+    margin-top: 10px;
 }
 
 .adatok {
@@ -42,4 +66,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+canvas {
+    background-color: bisque;
 }
