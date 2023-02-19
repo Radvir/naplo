@@ -7,26 +7,31 @@
     <title>Naplo</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
     <header>
     <div class="grid fokep">
         <a href="https://szlgbp.info/hazioldal"><img src="logo.png" alt="F-es logo"></a>
-        <!--
-            Make animation to the logo 
-        -->
     </div>
     </header>
     <main>
         <article class="értékelés">
+            <canvas id="canvaselem" width="300" height="200" style="border:1px solid #c3c3c3;">
+                Your browser does not support the canvas element.
+            </canvas>
             <!--canvas element1-->
         </article>
         <article class="jegyek">
+            <canvas id="canvaselem2" width="250" height="250" style="border:1px solid #c3c3c3;">
+                Your browser does not support the canvas element.
+            </canvas>
             <!--canvas element2-->
         </article>
         <article class="adatok"></article>
     </main>
-    
+    <input type="hidden" class="csoport" value="22f-szt-bertok">
+    <input type="hidden" id="dolgozatslug" value="szamabrazolasok">
     <script src="main.js"></script>
 </body>
 </html>
