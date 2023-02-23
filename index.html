@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Naplo</title>
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="https://raw.githubusercontent.com/Radvir/naplo/master/logo.png" type="image/png" />
+        <script src="rajz_framework/vaszon.js"></script>
+        <script src="rajz_framework/pont.js"></script>
+        <script src="svg-graph.js" defer></script>
+        <script src="main.js" defer></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naplo</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://raw.githubusercontent.com/Radvir/naplo/master/logo.png" type="image/png">
-  <script src="rajz_framework/vaszon.js"></script>
-  <script src="rajz_framework/pont.js"></script>
-  <script src="main.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <div class="grid fokep">
-      <a href="https://szlgbp.info/hazioldal"><img src="https://raw.githubusercontent.com/Radvir/naplo/master/logo.png"
-          alt="F-es logo"></a>
-    </div>
-  </header>
-  <main>
-    <ul id="📇">
-      <li>Pont: <span id="ertekeles_pont"></span>/<span id="ertekeles_maxpont"></span></li>
-      <li>Százalék: <span id="ertekeles_szazalek"></span></li>
-      <li>Jegy: <span id="ertekeles_jegy"></span></li>
-    </ul>
-    <ul id="🏆">
-      <li>1:<span id="jegy1">0%</span></li>
-      <li>1/2:<span id="jegy12"></span></li>
-      <li>2:<span id="jegy2"></span></li>
-      <li>2/3:<span id="jegy23"></span></li>
-      <li>3:<span id="jegy3"></span></li>
-      <li>3/4:<span id="jegy34"></span></li>
-      <li>4:<span id="jegy4"></span></li>
-      <li>4/5:<span id="jegy45"></span></li>
-      <li>5:<span id="jegy5"></span></li>
-      <li>5*:<span id="jegy55"></span></li>
-    </ul>
-    <ul id="📊">
-      <li>Átlag:</li>
-      <li>Medián:</li>
-      <li>Módusz:</li>
-      <li>Átlagtól való eltérésed:</li>
-      <li>Átlagos abszolút eltérés:</li>
-      <li>Szórás:</li>
-      <li>IQR:</li>
-    </ul>
-    <canvas id="canvaselem" width="500" height="500" style="border:1px solid #c3c3c3;">
-      A te böngésződ nem támogatja a vászon elemet :(
-    </canvas>
-    <canvas id="canvaselem2" width="250" height="250" style="border:1px solid #c3c3c3;">
-      Your browser does not support the canvas element :(
-    </canvas>
-
-  </main>
-  <input type="hidden" class="csoport" value="22f-szt-bertok">
-  <input type="hidden" id="dolgozatslug" value="szamabrazolasok">
-</body>
-
+    <body>
+        <header>
+            <div class="grid fokep">
+                <a href="https://szlgbp.info/hazioldal"><img src="https://raw.githubusercontent.com/Radvir/naplo/master/logo.png" alt="F-es logo" /></a>
+            </div>
+        </header>
+        <main>
+            <ul id="📇">
+                <li>Pont: <span id="ertekeles_pont"></span>/<span id="ertekeles_maxpont"></span></li>
+                <li>Százalék: <span id="ertekeles_szazalek"></span></li>
+                <li>Jegy: <span id="ertekeles_jegy"></span></li>
+            </ul>
+            <ul id="🏆">
+                <li>1:<span id="jegy1">0%</span></li>
+                <li>1/2:<span id="jegy12"></span></li>
+                <li>2:<span id="jegy2"></span></li>
+                <li>2/3:<span id="jegy23"></span></li>
+                <li>3:<span id="jegy3"></span></li>
+                <li>3/4:<span id="jegy34"></span></li>
+                <li>4:<span id="jegy4"></span></li>
+                <li>4/5:<span id="jegy45"></span></li>
+                <li>5:<span id="jegy5"></span></li>
+                <li>5*:<span id="jegy55"></span></li>
+            </ul>
+            <ul id="📊">
+                <li>Átlag:</li>
+                <li>Medián:</li>
+                <li>Módusz:</li>
+                <li>Átlagtól való eltérésed:</li>
+                <li>Átlagos abszolút eltérés:</li>
+                <li>Szórás:</li>
+                <li>IQR:</li>
+            </ul>
+            <svg style="background-color: white" id="svg-graph" viewBox="0 0 120 120" width="500" height="500"></svg>
+            <canvas id="canvaselem" width="500" height="500" style="border: 1px solid #c3c3c3"> A te böngésződ nem támogatja a vászon elemet :( </canvas>
+            <!-- <canvas id="canvaselem2" width="250" height="250" style="border: 1px solid #c3c3c3"> Your browser does not support the canvas element :( </canvas> -->
+        </main>
+        <input type="hidden" class="csoport" value="22f-szt-bertok" />
+        <input type="hidden" id="dolgozatslug" value="szamabrazolasok" />
+    </body>
 </html>
