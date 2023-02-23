@@ -1,51 +1,62 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: rgb(13, 17, 23);
-  color:white;
-  font-family: Poppins, Helvetica, sans-serif;
-  font-size: 24px;
+    background-color: rgb(13, 17, 23);
+    color: white;
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: 24px;
 }
 
-
-#🏆{ grid-area: ponthatar; }
-#📊{ grid-area: statisztika; }
-#📇{ grid-area: ertekeles; }
-#canvaselem{ grid-area: boxplot; }
-#canvaselem2{ grid-area: eloszlas; }
+#🏆 {
+    grid-area: ponthatar;
+}
+#📊 {
+    grid-area: statisztika;
+}
+#📇 {
+    grid-area: ertekeles;
+}
+#svg-graph {
+    grid-area: boxplot;
+}
+#canvaselem2 {
+    grid-area: eloszlas;
+}
 
 main {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-    "ertekeles eloszlas boxplot"
-    "ponthatar statisztika boxplot";
-  justify-items: center;
-  align-items: center;
-  gap:20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "ertekeles eloszlas boxplot"
+        "ponthatar statisztika boxplot";
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
 }
 
-#📇, #🏆, #📊{
-  list-style-type: none;
+#📇,
+#🏆,
+#📊 {
+    list-style-type: none;
 }
 
-#📇 span, #🏆 span, #📊 span{
-  color:gold;
+#📇 span,
+#🏆 span,
+#📊 span {
+    color: gold;
 }
 
-
-#canvaselem{
-  align-self: start;
-  justify-self:stretch;  
-  
+#svg-graph {
+    align-self: start;
+    justify-self: stretch;
 }
 
-#canvaselem2{
-  justify-self:stretch;  
+#canvaselem2 {
+    justify-self: stretch;
 }
 /* 
 .prec_to_jegy {
@@ -81,5 +92,5 @@ main {
 }
  */
 canvas {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
