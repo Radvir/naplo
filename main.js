@@ -282,7 +282,7 @@ async function main() {
 
 function modusz_func(adatok){
   modusz_szazalek.innerHTML += adatok.statisztika.modusz.szazalek.map(x => `${Math.round(x*10000)/100}%`).join(", ");
-  modusz_pont.innerHTML += adatok.statisztika.modusz.pont.map(x => `${x}%`).join(", ");
+  modusz_pont.innerHTML += adatok.statisztika.modusz.pont.map(x => `${x}p`).join(", ");
   modusz_jegy.innerHTML += adatok.statisztika.modusz.jegy.join(", ");
 }
 

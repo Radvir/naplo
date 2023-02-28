@@ -78,7 +78,7 @@ h1{
 }
 
 #🏆 span {
-  color: yellow;
+  color: var(--sarga);
 }
 
 #📊 .grid-container{
@@ -93,7 +93,11 @@ h1{
 
 }
 
-
+.szazalek,
+.pont,
+.jegy{
+  color: var(--sarga);
+}
 
 main {
   margin: 20px;
