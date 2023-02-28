@@ -1,13 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+:root {
+  --sarga: #ffe533;
+  --lila: #826bfa;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: rgb(13, 17, 23);
+    background-color: #31353a;
     color: white;
-    font-family: Poppins, Helvetica, sans-serif;
-    font-size: 24px;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 10pt;
+}
+
+a {
+  cursor: default;
+  text-decoration: none;
+  color: white;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: bald;
+  text-align: center;
+}
+
+#📇 .grid-container{
+  margin:20px;
+  display: grid;
+  grid-template-columns: 10ex 20px;
+  justify-content: start;
+  justify-items: start;
+  column-gap:5px;  
+  row-gap: 3px;
+}
+
+#📇 .felirat, #🏆 .felirat{
+  justify-self: end;
+}
+
+
+#🏆 .grid-container{
+  margin:20px;
+  display: grid;
+  grid-template-columns: 30px auto 30px auto;
+  column-gap:5px;
+}
+
+
+#🏆 .felirat:after{
+  content: ":";
+}
+
+
+.kiemeltszoveg {
+  color: var(--sarga);
 }
 
 #🏆 {
@@ -19,78 +70,57 @@ body {
 #📇 {
     grid-area: ertekeles;
 }
-#svg-graph {
-    grid-area: boxplot;
-}
-#canvaselem2 {
+#csoportiqr {
     grid-area: eloszlas;
 }
-
-main {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "ertekeles eloszlas boxplot"
-        "ponthatar statisztika boxplot";
-    justify-items: center;
-    align-items: center;
-    gap: 20px;
+#feladatstat {
+    grid-area: boxplot;
 }
 
-#📇,
-#🏆,
-#📊 {
+#🏆 span {
+  color: yellow;
+}
+
+#📊 .grid-container{
+  display: grid;
+  grid-template-columns: 100px 10ex 10ex 10ex;
+  grid-auto-rows: 50px;
+}
+
+#📊 .grid-container > div {
+  display: grid;
+  align-content: center;
+
+}
+
+
+
+main {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+      "ertekeles eloszlas boxplot"
+      "ponthatar statisztika boxplot";
+  gap: 20px;  
+}
+
+main > section{
+  background-color: #3d4046;
+}
+
+h2{
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 2px solid #4f5359;
+  padding: 10px;
+}
+
+ul {
     list-style-type: none;
 }
 
-#📇 span,
-#🏆 span,
-#📊 span {
-    color: gold;
-}
-
-#svg-graph {
-    align-self: start;
-    justify-self: stretch;
-}
-
-#canvaselem2 {
-    justify-self: stretch;
-}
-/* 
-.prec_to_jegy {
-    position: relative;
-    flex: 1;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.separator {
-    width: 80%;
-    height: 2px;
-    background-color: #d9faff;
-    position: absolute;
-    bottom: 0px;
-}
-
-.canvas2_div {
-    flex: 1;
-    height: 50%;
-    margin-top: 10px;
-}
-
-.adatok {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
- */
 canvas {
     background-color: #ffffff;
 }

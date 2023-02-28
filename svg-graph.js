@@ -50,14 +50,11 @@ function drawGraph(ponthatar, IQR, id = "svg-graph") {
   const svg = document.getElementById(id);
   if (!svg)
     throw `Unable to draw graph! No element with id "${id}"`;
-  svg.innerHTML += `<rect x="9" y="9" width="26" height="102" style="fill:#11111122;stroke:none;" />`;
-  svg.innerHTML += `<rect x="85" y="9" width="26" height="102" style="fill:#11111122;stroke:none;" />`;
-  svg.innerHTML += `<rect x="9" y="9" width="102" height="102" style="fill:none;stroke-width:0.4;stroke:black;" />`;
   for (const disp in ponthatar) {
     const y = 110 - ponthatar[disp];
-    svg.innerHTML += `<line x1="9" y1="${y}" x2="111" y2="${y}" style="stroke:${disp.length > 1 ? "#111" : "#666"};stroke-width:${disp.length > 1 ? "0.05" : "0.2"};"/>`;
-    svg.innerHTML += `<text x="22" y="${y - 1}" style="font:${disp.length > 1 ? "2.5px" : "4px"} serif;" text-anchor="middle" fill="blue">${disp}</text>`;
-    svg.innerHTML += `<text x="98" y="${y - 1}" style="font:${disp.length > 1 ? "2.5px" : "4px"} serif;" text-anchor="middle" fill="blue">${ponthatar[disp]}%</text>`;
+    svg.innerHTML += `<line x1="9" y1="${y}" x2="111" y2="${y}" style="stroke:${disp.length > 1 ? "#777" : "#d7d8dc"};stroke-width:0.4;"/>`;
+    svg.innerHTML += `<text x="22" y="${y + 4}" style="font:5px serif;" text-anchor="middle" fill="#d7d8dc">${disp}</text>`;
+    svg.innerHTML += `<text x="98" y="${y + 4}" style="font:5px serif;" text-anchor="middle" fill="#d7d8dc">${ponthatar[disp]}%</text>`;
   }
   const joints = [];
   const dist = 50 / (IQR.length - 1);
@@ -76,5 +73,8 @@ function drawGraph(ponthatar, IQR, id = "svg-graph") {
   let keypoints = "";
   for (let i = 0; i < joints.length - 1; i++)
     keypoints += cubicB\u00E9zier(joints[i], controlPoints[i * 2], controlPoints[i * 2 + 1], joints[i + 1]) + " ";
-  svg.innerHTML += `<polyline points="${keypoints}" style="fill:none;stroke:red;stroke-width:0.4" />`;
+  svg.innerHTML += `<polyline points="${keypoints}" style="fill:none;stroke:#826bfa;" />`;
+  svg.innerHTML += `<rect x="9" y="9" width="26" height="102" style="fill:none;stroke:#d7d8dc;" />`;
+  svg.innerHTML += `<rect x="85" y="9" width="26" height="102" style="fill:none;stroke:#d7d8dc;" />`;
+  svg.innerHTML += `<rect x="9" y="9" width="102" height="102" style="fill:none;stroke:#d7d8dc;" />`;
 }
