@@ -263,13 +263,20 @@ async function main() {
   // canvaselem2.innerHTML = w;
   felvitel_ertekeles(adatok);
   felvitel_ponthatarok(adatok);
-  modusz_func(adatok);
 
   h1.innerHTML = adatok.nev;
+
+  modusz_szazalek.innerHTML += adatok.statisztika.modusz.szazalek.map(x => `${Math.round(x*10000)/100}%`).join(", ");
+  modusz_pont.innerHTML += adatok.statisztika.modusz.pont.map(x => `${x}p`).join(", ");
+  modusz_jegy.innerHTML += adatok.statisztika.modusz.jegy.join(", ");
   
   atlag_szazalek.innerHTML = Math.round(adatok.statisztika.atlag.szazalek * 100) + "%";
   atlag_pont.innerHTML = adatok.statisztika.atlag.pont + "p";
   atlag_jegy.innerHTML = adatok.statisztika.atlag.jegy;
+
+  atlagtol_valo_elteres_szazalek.innerHTML = Math.round((adatok.statisztika.atlag.szazalek - adatok.ertekeles.szazalek)*10000) /100 + "%";
+  atlagtol_valo_elteres_pont.innerHTML = Math.round((adatok.statisztika.atlag.pont - adatok.ertekeles.pont)*10000) /1000 + "p";
+  atlagtol_valo_elteres_jegy.innerHTML = adatok.statisztika.atlag.jegy - adatok.ertekeles.jegy; // a jegy nem egy szám ("4/5"). TODO: átalakítani a jegyet számmá
 
   atlagos_abszolut_elteres_szazalek.innerHTML = Math.round(adatok.statisztika.atlagos_abszolut_elteres.szazalek * 10000) / 100 + "%";
   atlagos_abszolut_elteres_pont.innerHTML = Math.round(adatok.statisztika.atlagos_abszolut_elteres.pont * 100) / 100 + "p";
@@ -281,9 +288,7 @@ async function main() {
 }
 
 function modusz_func(adatok){
-  modusz_szazalek.innerHTML += adatok.statisztika.modusz.szazalek.map(x => `${Math.round(x*10000)/100}%`).join(", ");
-  modusz_pont.innerHTML += adatok.statisztika.modusz.pont.map(x => `${x}p`).join(", ");
-  modusz_jegy.innerHTML += adatok.statisztika.modusz.jegy.join(", ");
+  
 }
 
 function osszeg(lista) {
