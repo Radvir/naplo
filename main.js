@@ -276,7 +276,7 @@ async function main() {
 
   atlagtol_valo_elteres_szazalek.innerHTML = Math.round((adatok.statisztika.atlag.szazalek - adatok.ertekeles.szazalek)*10000) /100 + "%";
   atlagtol_valo_elteres_pont.innerHTML = Math.round((adatok.statisztika.atlag.pont - adatok.ertekeles.pont)*10000) /1000 + "p";
-  atlagtol_valo_elteres_jegy.innerHTML = adatok.statisztika.atlag.jegy - adatok.ertekeles.jegy; // a jegy nem egy szám ("4/5"). TODO: átalakítani a jegyet számmá
+  atlagtol_valo_elteres_jegy.innerHTML = Math.round((adatok.statisztika.atlag.jegy - adatok.ertekeles.jegy.replace('/', '.'))*100)/100;
 
   atlagos_abszolut_elteres_szazalek.innerHTML = Math.round(adatok.statisztika.atlagos_abszolut_elteres.szazalek * 10000) / 100 + "%";
   atlagos_abszolut_elteres_pont.innerHTML = Math.round(adatok.statisztika.atlagos_abszolut_elteres.pont * 100) / 100 + "p";
